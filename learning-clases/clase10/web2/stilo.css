@@ -1,0 +1,30 @@
+body{
+    background-image: url("imgs/weed.jpg");
+}
+
+.titulo{
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.texto{
+    color: white;
+    background-color: black;
+
+}
+.imagen{
+    width: 170;
+    height: 170px;
+}
+
+.producto{
+    float: inline-start;
+    background-color: gray;
+}
+
+.producto2{
+    float:inline-start;
+    background-color: gray;
+
+}
