@@ -14,18 +14,19 @@ def verContenido(url):
         contenido = f.read()
         return contenido
     
-def verificar():
 
-    if Palabra(input("Ingrese la palabra a filtrar: ")) == verContenido('https://www.antena3.com/noticias/cultura/mapa-insultos-espana-cuales-son-improperios-mas-utilizados-comunidad-autonoma_202012185fdc94b3904ac7000171eab3.html'):
-        texto = Palabra
-        nombre_fichero = 'Palabra-'+ texto + '.txt'
-        f = open(nombre_fichero, 'w')
-        f.write(f'{texto}\n')
-        f.close
-    else:
-        print("No se encontro la palabra")
+lista = ['bobo','imbécil']    
+def verificar(url):
 
-print (verificar())
+    contenido = verContenido(url)
+
+    for po in lista:
+        if po in contenido.decode():
+            return f"La palabra {po} existe en el sitio"
+
+
+url = 'https://www.antena3.com/noticias/cultura/mapa-insultos-espana-cuales-son-improperios-mas-utilizados-comunidad-autonoma_202012185fdc94b3904ac7000171eab3.html'
+print (verificar(url))
 
 
 
